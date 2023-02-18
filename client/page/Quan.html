@@ -1,0 +1,32 @@
+<!---show sản phẩm-->
+<h3 class="pt-3 font-weight-light ">Các sản phẩm</h3>
+
+<div class="row justify-content-between" ng-controller="productController">
+    <div class=" content " ng-repeat="item in Quan">
+        <div class=" bg-light m-5 mt-4 text-center">
+            <a href="#!/productDetail/{{ item.id }}"><img width="100%" height="250px" src="{{ item.image }}" alt=""></a>
+            <a href="#!/productDetail/{{ item.id }}">
+                <p>{{ item.name }}</p>
+            </a>
+            <h4 class="text-danger "> {{ item.price }} VND</h4>
+            <button class="w-100 bg-danger border-0 rounded text-white">Mua ngay</button>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,67 @@
+<h2 class="mt-5 pl-4">Chi tiết sản phẩm</h2>
+<div class="mt-5 text-center d-flex justify-content-center" ng-controller="productController">
+    <div class="">
+        <div class=" bg-light  text-center ">
+            <img height="500px" width="500px" height="250px" src="{{ product.image }}" alt="">
+            <p>{{ product.name }}</p>
+            <h4 class="text-danger "> {{ product.price }} VND</h4>
+            <p>Mô tả :{{ product.description }}</p>
+        </div>
+    </div>
+    <div class="div text-center pl-5">
+        <h2>Tên sản phẩm : {{ product.name }}</h2>
+        <div>
+            <h3 class="text-danger">{{ product.price }} VND</h3>
+        </div>
+        <div>
+            <hr>
+            <h5>Các size</h5>
+            <button class="rounded bg-danger border-0 ">S</button>
+            <button class="rounded bg-success border-0 ">M</button>
+            <button class="rounded bg-warning border-0 ">L</button>
+            <button class="rounded bg-info border-0 ">XL</button>
+        </div>
+        <div>
+            <hr>
+            <label for="">Số lượng</label>
+            <input type="number" min="0" step="1" placeholder="Số lượng">
+        </div>
+        <div>
+            <hr>
+            <button class="bg-warning rounded border-0">Thêm vào giỏ hàng</button>
+        </div>
+    </div>
+</div>
+<!---Các sản phẩm liên quan-->
+<h3 class="pt-3 font-weight-light ">Các sản phẩm Liên quan</h3>
+
+<div class="row justify-content-between" ng-controller="productController">
+    <div class=" content " ng-repeat="item in productList">
+        <div class=" bg-light m-5 mt-4 text-center">
+            <a href="#!/productDetail/{{ item.id }}"><img width="100%" height="250px" src="{{ item.image }}" alt=""></a>
+            <a href="#!/productDetail/{{ item.id }}">
+                <p>{{ item.name }}</p>
+            </a>
+            <h4 class="text-danger "> {{ item.price }} VND</h4>
+            <button class="w-100 bg-danger border-0 rounded text-white">Mua ngay</button>
+        </div>
+    </div>
+</div>
+<!--Phân trang-->
+<div class="d-flex justify-content-center">
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>

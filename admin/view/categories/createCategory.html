@@ -1,0 +1,10 @@
+<div class="container" ng-controller="categoryController">
+    <h1>Thêm danh mục</h1>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tên danh mục</label>
+            <input type="text" class="form-control" ng-model="category.categoryName" placeholder=" Tên danh mục">
+        </div>
+        <button ng-click="addCategory()" type="submit" class="btn btn-primary">Thêm danh mục</button>
+    </form>
+</div>

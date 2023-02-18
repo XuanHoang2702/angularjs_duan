@@ -1,0 +1,21 @@
+<div class="container" ng-controller="userController">
+    <h1>Danh sách user</h1>
+    <div class="table">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Stt</th>
+                    <th scope="col">user name</th>
+                    <th scope="col">password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in userList ">
+                    <th scope="row">{{ $index+1 }}</th>
+                    <td>{{ item.userName }}</td>
+                    <td>{{ item.passWord }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

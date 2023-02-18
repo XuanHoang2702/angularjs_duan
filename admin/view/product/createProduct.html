@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Thêm sản phẩm</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Thêm sản phẩm</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" ng-model="product.name" placeholder=" Name product">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">price</label>
+                <input type="text" class="form-control" ng-model="product.price" placeholder="price">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Image</label>
+                <input type="text" class="form-control" ng-model="product.image" placeholder="Image">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">quantity</label>
+                <input type="text" class="form-control" ng-model="product.quantity" placeholder="discount">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Categories</label>
+                <select name="" id="" class="form-control" ng-model="product.categoryId">
+                    <option ng-repeat="item in categoryList" value="{{ item.id }}">
+                        {{ item.categoryName }}
+
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">description</label>
+                <textarea class="form-control" ng-model="product.description" name="" id="" cols="30" rows="10"
+                    placeholder="Mô tả sản phẩm"></textarea>
+            </div>
+            <button ng-click="addItem()" type="submit" class="btn btn-primary">Thêm</button>
+        </form>
+    </div>
+</body>
+
+</html>
